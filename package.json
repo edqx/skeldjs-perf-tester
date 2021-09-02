@@ -5,8 +5,8 @@
   "license": "MIT",
   "packageManager": "yarn@3.0.0-rc.12",
   "dependencies": {
-    "@skeldjs/client": "^2.11.15",
-    "@skeldjs/util": "^2.11.15",
+    "@skeldjs/client": "^2.13.8",
+    "@skeldjs/util": "^2.13.8",
     "cli-argparse": "^1.1.2"
   }
 }
