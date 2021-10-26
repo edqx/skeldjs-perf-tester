@@ -1,5 +1,5 @@
 const skeldjs = require("@skeldjs/client");
-const { Int2Code, sleep } = require("@skeldjs/util");
+const { Int2Code } = require("@skeldjs/util");
 const threads = require("worker_threads");
 const cliArgparse = require("cli-argparse");
 
@@ -30,15 +30,15 @@ if (threads.isMainThread) {
         for (let i = 0; i < numRooms; i++) {
             const client = new skeldjs.SkeldjsClient("2021.6.30", { attemptAuth: false });
             await client.connect("127.0.0.1", "weakeyes", 22023);
-            const gameCode = await client.createGame({ maxPlayers: 15 });
+            const gameCode = await client.createGame({ maxPlayers: 15 }, true);
             console.log("Created %s, joining clients..", Int2Code(gameCode));
-            client.me.control.setName("a");
-            client.me.control.setColor(skeldjs.Color.Blue);
+            // client.me.control.setName("a");
+            // client.me.control.setColor(skeldjs.Color.Blue);
             const room = [];
             rooms.push(room);
             room.push(client);
 
-            for (let i = 0; i < 14; i++) {
+            for (let i = 0; i < 0; i++) {
                 const joinClient = new skeldjs.SkeldjsClient("2021.6.30", { attemptAuth: false });
                 await joinClient.connect("127.0.0.1", "weakeyes", 22023);
                 await joinClient.joinGame(gameCode);
