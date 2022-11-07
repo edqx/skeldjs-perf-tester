@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "packageManager": "yarn@3.0.0-rc.12",
+  "packageManager": "yarn@3.2.4",
   "dependencies": {
-    "@skeldjs/client": "^2.13.8",
-    "@skeldjs/util": "^2.13.8",
+    "@skeldjs/client": "^2.15.34",
+    "@skeldjs/constant": "^2.15.34",
+    "@skeldjs/protocol": "^2.15.34",
+    "@skeldjs/util": "^2.15.34",
     "cli-argparse": "^1.1.2"
   }
 }
